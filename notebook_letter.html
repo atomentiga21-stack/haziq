@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook Letter</title>
+    <style>
+        body {
+            background: url('https://i.imgur.com/4SfgI9A.png'); /* Notebook paper background */
+            background-size: cover;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #333;
+            animation: slide 10s infinite;
+            font-size: 2em;
+        }
+        @keyframes slide {
+            0% { transform: translate(-50%, -50%) translateX(-200%); }
+            50% { transform: translate(-50%, -50%) translateX(100%); }
+            100% { transform: translate(-50%, -50%) translateX(-200%); }
+        }
+        .heart {
+            color: red;
+        }
+        .spiral {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 30px;
+            background: url('https://i.imgur.com/QvFyWny.png'); /* Spiral binding image */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="spiral"></div>
+    <div class="container">
+        <p>\u2764; \u2764; I'm sorry dear about yesterday. I really care about dear. I love you so much dear! \u2764; \u2764;</p>
+    </div>
+</body>
+</html>
