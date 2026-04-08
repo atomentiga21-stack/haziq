@@ -6,70 +6,70 @@
     <title>Romantic Apology</title>
     <style>
         body {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            margin: 0;
+            height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            animation: fadeIn 1s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .heart {
+            background: linear-gradient(45deg, #ff99cc, #66ccff);
+            animation: gradient 15s ease infinite;
+            overflow: hidden;
             position: relative;
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            margin: 20px;
-            background: red;
-            transform: rotate(-45deg);
-            animation: pulse 1s infinite;
         }
-
-        .heart::before,
-        .heart::after {
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            animation: textGlow 1.5s infinite;
+        }
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff66b2, 0 0 15px #ff66b2; }
+            50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff66b2, 0 0 30px #ff66b2; }
+            100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff66b2, 0 0 15px #ff66b2; }
+        }
+        .heart {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: red;
+            position: relative;
+            margin: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .heart:before,
+        .heart:after {
             content: '';
-            position: absolute;
-            top: 0;
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             background: red;
             border-radius: 50%;
+            position: absolute;
         }
-
-        .heart::before {
-            left: 50px;
-        }
-
-        .heart::after {
+        .heart:before {
+            top: -25px;
             left: 0;
-            top: 50px;
         }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        .heart:after {
+            left: 25px;
+            top: 0;
         }
-
-        .message {
-            font-size: 24px;
-            margin: 10px 0;
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
     </style>
 </head>
 <body>
-    <div>
-        <div class="heart"></div>
-        <div class="message">saya minta maaf banyak banyak kat sayangg.. saya caring pasal sayang tauuu</div>
-        <div class="message">i love you so much sayangg</div>
-    </div>
+    <h1>💖 saya minta maaf banyak banyak kat sayangg.. saya caring pasal sayang tauuu 💖</h1>
+    <h1>💖 i love you so much sayangg 💖</h1>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
 </body>
 </html>
