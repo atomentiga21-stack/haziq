@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Apology</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .heart {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background: red;
+            transform: rotate(-45deg);
+            animation: pulse 1s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            left: 50px;
+        }
+
+        .heart::after {
+            left: 0;
+            top: 50px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .message {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="heart"></div>
+        <div class="message">saya minta maaf banyak banyak kat sayangg.. saya caring pasal sayang tauuu</div>
+        <div class="message">i love you so much sayangg</div>
+    </div>
+</body>
+</html>
